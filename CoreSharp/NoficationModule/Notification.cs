@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreSharp
+namespace CoreSharp.NoficationModule
 {
-    internal class PhoneNumber
+    internal class Notification
     {
-
-
-
-
     }
 }

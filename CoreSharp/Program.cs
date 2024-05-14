@@ -75,13 +75,24 @@
             string personName = "Mahmood";
             string personLastName = "Garibov";
             string personFatherName = "Elchin";
-            bool isMarried = true;
-            bool hasChild = false;
-            int age = 20;
+            int age = 50;
 
-            Console.WriteLine(personName);
-            Console.WriteLine(personLastName);
-            Console.WriteLine(personFatherName);
+            //sring concatenation
+            //string personFullName = personName + " " + personLastName + " " + personFatherName;
+
+            //Console.WriteLine(personFullName);
+
+            Console.WriteLine("Tam ad: " + personName + " " + personLastName + " " + personFatherName);
+
+            if (age == 20 || age == 50)
+            {
+                Console.WriteLine("Yas: " + age + " (Yubiley)");
+            }
+            else
+            {
+                Console.WriteLine("Yas: " + age);
+            }
+
 
             if (age <= 18)
             {
@@ -99,9 +110,6 @@
             {
                 Console.WriteLine("Yasli");
             }
-
-
-          
         }
     }
 }

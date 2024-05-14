@@ -9,7 +9,15 @@
             // "08.05.2024" //
             // true //                        boolean
             //  false
-            Console.WriteLine(  "SAlam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
+            Console.WriteLine(  "Salam");
 
             //============================================================
 

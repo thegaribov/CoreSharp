@@ -91,41 +91,47 @@
             Console.Write("Yasinizi daxil edin: ");
             int age = int.Parse(Console.ReadLine());
 
-            
-            Console.WriteLine("==============================================================");
-
-            //sring concatenation
-            //string personFullName = personName + " " + personLastName + " " + personFatherName;
-
-            //Console.WriteLine(personFullName);
-
-            Console.WriteLine("Tam ad: " + personName + " " + personLastName + " " + personFatherName);
-
-            if (age == 20 || age == 50)
+            if (age < 0)
             {
-                Console.WriteLine("Yas: " + age + " (Yubiley)");
+                Console.WriteLine("Pls enter correct age");
             }
             else
             {
-                Console.WriteLine("Yas: " + age);
-            }
+                Console.WriteLine("==============================================================");
+
+                //sring concatenation
+                //string personFullName = personName + " " + personLastName + " " + personFatherName;
+
+                //Console.WriteLine(personFullName);
+
+                Console.WriteLine("Tam ad: " + personName + " " + personLastName + " " + personFatherName);
+
+                if (age == 20 || age == 50)
+                {
+                    Console.WriteLine("Yas: " + age + " (Yubiley)");
+                }
+                else
+                {
+                    Console.WriteLine("Yas: " + age);
+                }
 
 
-            if (age <= 18)
-            {
-                Console.WriteLine("Yeniyetme");
-            }
-            else if (age >= 19 && age <= 30)
-            {
-                Console.WriteLine("Orya yasli");
-            }
-            else if (age > 30 && age <= 65)
-            {
-                Console.WriteLine("Qocaa");
-            }
-            else
-            {
-                Console.WriteLine("Yasli");
+                if (age <= 18)
+                {
+                    Console.WriteLine("Yeniyetme");
+                }
+                else if (age >= 19 && age <= 30)
+                {
+                    Console.WriteLine("Orya yasli");
+                }
+                else if (age > 30 && age <= 65)
+                {
+                    Console.WriteLine("Qocaa");
+                }
+                else
+                {
+                    Console.WriteLine("Yasli");
+                }
             }
         }
     }

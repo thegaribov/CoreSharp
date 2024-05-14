@@ -4,14 +4,15 @@
     {
         static void Main(string[] args)
         {
-            string personName = "Mahmood";
-            string personLastName = "Garibov";
-            string personFatherName = "Elchin";
-            bool isMarried = false;
+            //string personName = "Mahmood";
+            //string personLastName = "Garibov";
+            //string personFatherName = "Elchin";
+            //bool isMarried = false;
+            //bool hasChild = false;
 
-            Console.WriteLine(personName);
-            Console.WriteLine(personLastName);
-            Console.WriteLine(personFatherName);
+            //Console.WriteLine(personName);
+            //Console.WriteLine(personLastName);
+            //Console.WriteLine(personFatherName);
 
 
             //== Comparison operator
@@ -36,12 +37,35 @@
 
             //============================================================
 
+
+            string personName = "Mahmood";
+            string personLastName = "Garibov";
+            string personFatherName = "Elchin";
+            bool isMarried = true;
+            bool hasChild = false;
+            int age = 20;
+
+            Console.WriteLine(personName);
+            Console.WriteLine(personLastName);
+            Console.WriteLine(personFatherName);
+
+            //if condition, selection statement
             if (isMarried) //codnition
             {
-                Console.WriteLine("Evli");
+
+                Console.WriteLine("Evlidir");
+                if (hasChild)
+                {
+                    Console.WriteLine("Ovladi var");
+                }
+                else 
+                {
+                    Console.WriteLine("Ovladi yoxdur");
+                }
             }
             else
             {
+                
                 Console.WriteLine("Subay");
             }
         }

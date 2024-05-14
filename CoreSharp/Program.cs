@@ -72,10 +72,27 @@
             //============================================================
 
             //input
-            string personName = "Mahmood";
-            string personLastName = "Garibov";
-            string personFatherName = "Elchin";
-            int age = 50;
+            //string personName = "Mahmood";
+            //string personLastName = "Garibov";
+            //string personFatherName = "Elchin";
+            //int age = 50;
+
+
+            Console.Write("Adivizi daxil edin: ");
+            string personName = Console.ReadLine();
+
+            Console.Write("Soyadinizi daxil edin: ");
+            string personLastName = Console.ReadLine();
+
+            Console.Write("Ata adinizi daxil edin: ");
+            string personFatherName = Console.ReadLine();
+
+            //parsing
+            Console.Write("Yasinizi daxil edin: ");
+            int age = int.Parse(Console.ReadLine());
+
+            
+            Console.WriteLine("==============================================================");
 
             //sring concatenation
             //string personFullName = personName + " " + personLastName + " " + personFatherName;

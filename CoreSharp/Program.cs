@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
-            int inputCounter = int.Parse(Console.ReadLine());
+            decimal resultTotal = 0;
 
-            while (inputCounter > 0)
+            while (true)
             {
+                Console.WriteLine("=============================================================================================");
+                Console.WriteLine("=============================================================================================");
                 Console.Write("Size : ");
                 int size = int.Parse(Console.ReadLine());
 
@@ -26,20 +28,26 @@
                 Console.Write("Count : ");
                 int count = int.Parse(Console.ReadLine()); //Short cut to replace all : Ctrl + RR
 
-                decimal total = count * price;
+                decimal individualTotal = count * price;
+                resultTotal = resultTotal + individualTotal;
 
+                Console.WriteLine($"Size : {size},  Color : {color}, Brand name : {brandName}, Category : {category}, Price : {price}, Count : {count}, Total : {individualTotal}");
+                Console.WriteLine("=============================================================================================");
+                Console.WriteLine("=============================================================================================");
 
+                Console.WriteLine("Yeni ayaqqabi elave olunsumu? (Yes, No) (Y, N) ");
+                string loopTerminationResult = Console.ReadLine();
 
-                //Concantenation
-                //Console.WriteLine("Size : " + shoesSize + ", Color : " + );
-
-                Console.WriteLine($"Size : {size},  Color : {color}, Brand name : {brandName}, Category : {category}, Price : {price}, Count : {count}, Total : {total}");
-
-                inputCounter = inputCounter - 1;
+                if (loopTerminationResult == "No" || loopTerminationResult == "N")
+                {
+                    //break based loop control
+                    break;
+          
+                }
             }
 
 
-            //Console.WriteLine("Result Total : " + (firstShoesTotal + secondShoesTotal));
+            Console.WriteLine("Result Total : " + resultTotal);
 
         }
     }

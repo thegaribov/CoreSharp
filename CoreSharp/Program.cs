@@ -10,8 +10,24 @@
             {
                 Console.WriteLine("=============================================================================================");
                 Console.WriteLine("=============================================================================================");
+                string operatorName;
                 int size;
                 string color;
+
+                #region Operator name validaiton
+
+                while (true)
+                {
+                    Console.Write("Operator's name : ");
+                    operatorName = Console.ReadLine();
+
+                    if (operatorName.Length >= 3 && operatorName.Length <= 15)
+                        break;
+                    else
+                        Console.WriteLine("Size dugun daxil edilmeyib");
+                }
+
+                #endregion
 
                 #region Size validation
 
@@ -42,7 +58,6 @@
                 }
 
                 #endregion
-
 
                 Console.Write("Brand name : ");
                 string brandName = Console.ReadLine();

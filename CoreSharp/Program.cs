@@ -10,8 +10,23 @@
             {
                 Console.WriteLine("=============================================================================================");
                 Console.WriteLine("=============================================================================================");
-                Console.Write("Size : ");
-                int size = int.Parse(Console.ReadLine());
+                int size;
+
+
+                #region Size validation
+
+                while (true)
+                {
+                    Console.Write("Size : ");
+                    size = int.Parse(Console.ReadLine());
+
+                    if (size >= 30 && size <= 50)
+                        break;
+                    else
+                        Console.WriteLine("Size dugun daxil edilmeyib");
+                }
+
+                #endregion
 
                 Console.Write("Color : ");
                 string color = Console.ReadLine();
@@ -42,7 +57,7 @@
                 {
                     //break based loop control
                     break;
-          
+
                 }
             }
 

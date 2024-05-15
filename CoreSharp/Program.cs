@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            while (true)
+            int inputCounter = int.Parse(Console.ReadLine());
+
+            while (inputCounter > 0)
             {
                 Console.Write("Size : ");
                 int size = int.Parse(Console.ReadLine());
@@ -27,11 +29,13 @@
                 decimal total = count * price;
 
 
+
                 //Concantenation
                 //Console.WriteLine("Size : " + shoesSize + ", Color : " + );
 
                 Console.WriteLine($"Size : {size},  Color : {color}, Brand name : {brandName}, Category : {category}, Price : {price}, Count : {count}, Total : {total}");
 
+                inputCounter = inputCounter - 1;
             }
 
 

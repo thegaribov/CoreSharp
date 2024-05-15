@@ -11,7 +11,7 @@
                 Console.WriteLine("=============================================================================================");
                 Console.WriteLine("=============================================================================================");
                 int size;
-
+                string color;
 
                 #region Size validation
 
@@ -28,8 +28,21 @@
 
                 #endregion
 
-                Console.Write("Color : ");
-                string color = Console.ReadLine();
+                #region Color validation
+
+                while (true)
+                {
+                    Console.Write("Color : ");
+                    color = Console.ReadLine();
+
+                    if (color == "Red" || color == "Black" || color == "Blue")
+                        break;
+                    else
+                        Console.WriteLine("Color dugun daxil edilmeyib");
+                }
+
+                #endregion
+
 
                 Console.Write("Brand name : ");
                 string brandName = Console.ReadLine();

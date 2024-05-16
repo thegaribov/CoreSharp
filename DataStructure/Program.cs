@@ -27,6 +27,7 @@
 
             int arrIdx = 0;
 
+            //version 1
             while (true)
             {
                 Console.WriteLine(numbers[arrIdx]);
@@ -39,8 +40,22 @@
                 arrIdx++;
             }
 
+            //version 2
 
-          
+            arrIdx = 0;
+
+            while (arrIdx <= numbersArrLastIdx)
+            {
+                Console.WriteLine(numbers[arrIdx]);
+
+                arrIdx++;
+            }
+
+
+
+
+
+
         }
     }
 }

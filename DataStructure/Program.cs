@@ -25,37 +25,56 @@
             int[] numbers = { 2, 3, 4, 5, 10, 23, 54, 67, 87, 98 };
             int numbersArrLastIdx = numbers.Length - 1;
 
-            int arrIdx = 0;
 
             //version 1
+            int firstVersionArrIdx = 0;
             while (true)
             {
-                Console.WriteLine(numbers[arrIdx]);
+                Console.WriteLine(numbers[firstVersionArrIdx]);
 
-                if (arrIdx == numbersArrLastIdx)
+                if (firstVersionArrIdx == numbersArrLastIdx)
                 {
                     break;
                 }
 
-                arrIdx++;
+                firstVersionArrIdx++;
             }
+
+            Console.WriteLine("===================================");
 
             //version 2
-
-            arrIdx = 0;
-
-            while (arrIdx <= numbersArrLastIdx)
+            int secondVersionArrIdx = 0;
+            while (secondVersionArrIdx <= numbersArrLastIdx)
             {
-                Console.WriteLine(numbers[arrIdx]);
+                Console.WriteLine(numbers[secondVersionArrIdx]);
 
-                arrIdx++;
+                secondVersionArrIdx++;
+            }
+
+            Console.WriteLine("=================================== (In reverse order)");
+
+
+            //version 3 (In reverse order)
+            int thirdVersionArrIdx = numbersArrLastIdx;
+            while (thirdVersionArrIdx >= 0)
+            {
+                Console.WriteLine(numbers[thirdVersionArrIdx]);
+
+                thirdVersionArrIdx--;
             }
 
 
+            Console.WriteLine("===================================");
 
 
+            //version 4 
+            int fourthVersionArrIdx = numbersArrLastIdx;
+            while (fourthVersionArrIdx >= 0)
+            {
+                Console.WriteLine(numbers[numbersArrLastIdx - fourthVersionArrIdx]);
 
-
+                fourthVersionArrIdx--;
+            }
         }
     }
 }

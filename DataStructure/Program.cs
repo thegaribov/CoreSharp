@@ -22,22 +22,25 @@
 
             //Console.WriteLine(numbers[77]);
 
-           
-
             int[] numbers = { 2, 3, 4, 5, 10, 23, 54, 67, 87, 98 };
+            int numbersArrLastIdx = numbers.Length - 1;
 
             int arrIdx = 0;
 
-            while (arrIdx < numbers.Length) //Alternative arrIdx <= numbers.Length - 1;
+            while (true)
             {
-                int number = numbers[arrIdx];
+                Console.WriteLine(numbers[arrIdx]);
 
-                Console.WriteLine(number);
+                if (arrIdx == numbersArrLastIdx)
+                {
+                    break;
+                }
 
-                //arrIdx = arrIdx + 1;
-                //arrIdx += 1;
                 arrIdx++;
             }
+
+
+          
         }
     }
 }

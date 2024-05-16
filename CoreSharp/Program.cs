@@ -72,7 +72,7 @@
                 int count = int.Parse(Console.ReadLine()); //Short cut to replace all : Ctrl + RR
 
                 decimal individualTotal = count * price;
-                resultTotal = resultTotal + individualTotal;
+                resultTotal += individualTotal;
 
                 Console.WriteLine($"Size : {size},  Color : {color}, Brand name : {brandName}, Category : {category}, Price : {price}, Count : {count}, Total : {individualTotal}");
                 Console.WriteLine("=============================================================================================");

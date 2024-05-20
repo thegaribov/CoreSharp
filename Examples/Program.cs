@@ -4,46 +4,32 @@
     {
         static void Main(string[] args)
         {
-            #region Task 1
+            int[] arr = { 2, 3, 6, 12, 5 };
 
-            string[] names = { "Mahmood", "Eldar", "Asiman", "Eldar" };
 
-            int idx = 0;
-
-            while (idx < names.Length)
+            for (int i = 0; i < arr.Length; i++)
             {
-                string name = names[idx];
-
-                if (name == "Eldar")
+                Console.WriteLine();
+                Console.WriteLine("============================");
+                if (arr[i] % 2 == 0)
                 {
-                    Console.WriteLine("Hello world");
-                    break;
+                    Console.WriteLine("Cut ededler");
+                    Console.WriteLine("============================");
+
+                    continue;
                 }
 
-                idx++;
+
+                Console.WriteLine("Hello world");
+                Console.WriteLine("============================");
+                Console.WriteLine();
             }
 
 
-            #endregion
-
-            #region Array daxilinde elementlerin ceminin tapilmasi
-
-            decimal[] prices = { 9888.2M, 54, 123, 56, 23, 87 };
-
-            int task2Idx = 0;
-            decimal sum = 0;
-
-            while (task2Idx < prices.Length)
-            {
-                sum += prices[task2Idx];
-
-                task2Idx++;
-            }
-
-            Console.WriteLine(sum);
 
 
-            #endregion
+
+
         }
     }
 }

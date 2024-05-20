@@ -67,14 +67,21 @@ internal class Program
             {
                 Console.Write("Pls enter desired currency code : ");
                 string aplha3 = Console.ReadLine();
+                decimal amount = 0;
 
-                Console.Write("Pls enter desired amount : ");
-                decimal amount = decimal.Parse(Console.ReadLine());
-
-                if (amount <= 0)
+                while (true)
                 {
-                    Console.WriteLine("Amount should be greater than 0");
-                    continue;
+                    Console.Write("Pls enter desired amount : ");
+                    amount = decimal.Parse(Console.ReadLine());
+
+                    if (amount <= 0)
+                    {
+                        Console.WriteLine("Amount should be greater than 0");
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
 
                 bool isFound = false;
@@ -103,7 +110,6 @@ internal class Program
                 Console.WriteLine("I'm sorry we didn't find a command");
                 Console.WriteLine("Pls write /help to see available commands");
             }
-
 
             Console.WriteLine();
         }

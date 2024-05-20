@@ -9,9 +9,17 @@ internal class Program
 
         while (true)
         {
-            Console.Write("Pls enter available command : ");
+            Console.WriteLine("Pls write /help to see available commands");
+            Console.Write("Pls enter desired command : ");
             string command = Console.ReadLine();
 
+            if (command == "/help")
+            {
+                Console.WriteLine("1. /show-recent-currency-rates");
+                Console.WriteLine("2. /find-currency-rate-by-code");
+                Console.WriteLine("3. /calculate-amount-by-currecy");
+                Console.WriteLine("4. /exit");
+            }
             if (command == "/show-recent-currency-rates")
             {
                 int currIdx = 0;

@@ -17,7 +17,7 @@ internal class Program
             {
                 Console.WriteLine("1. /show-recent-currency-rates or /all");
                 Console.WriteLine("2. /find-currency-rate-by-code or /find");
-                Console.WriteLine("3. /calculate-amount-by-currecy or /calc");
+                Console.WriteLine("3. /calculate-amount-by-currency or /calc");
                 Console.WriteLine("4. /exit");
             }
             else if (command == "/exit")
@@ -64,6 +64,36 @@ internal class Program
                     Console.WriteLine("I'm sorry, we can't found desired currency");
                 }
             }
+            else if (command == "/calculate-amount-by-currency" | command == "/calc")
+            {
+                Console.Write("Pls enter desired currency code : ");
+                string aplha3 = Console.ReadLine();
+
+                Console.Write("Pls enter desired amount : ");
+                decimal amount = decimal.Parse(Console.ReadLine());
+
+                bool isFound = false;
+
+                for (int i = 0; i < currencies.Length; i++)
+                {
+                    string currency = currencies[i];
+                    decimal currencyRate = currencyRates[i];
+
+                    if (currency == aplha3)
+                    {
+                        Console.Write("We found desired currency, ");
+                        Console.WriteLine($"Aplha3 : {currency}, Rate : {currencyRate}, Amoubt in currency : {Math.Round(amount / currencyRate, 2)}, ");
+                        isFound = true;
+                        break;
+                    }
+                }
+
+                if (!isFound)
+                {
+                    Console.WriteLine("I'm sorry, we can't found desired currency");
+                }
+            }
+
 
             Console.WriteLine();
         }

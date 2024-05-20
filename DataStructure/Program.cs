@@ -1,9 +1,12 @@
-﻿namespace DataStructure
+﻿using System.Xml.Linq;
+
+namespace DataStructure
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+
             //int firstNumber = 10;
             //int secondNumber = 20;
             //int thirdNumber = 30;
@@ -72,30 +75,25 @@
             //    fourthVersionArrIdx--;
             //}
 
-            string[] numbers = new string[5];
-            int idxGetCounter = 0;
+            //string[] numbers = new string[5];
+            //int idxGetCounter = 0;
 
-            while (idxGetCounter < numbers.Length)
-            {
-                numbers[idxGetCounter] = Console.ReadLine();
+            //while (idxGetCounter < numbers.Length)
+            //{
+            //    numbers[idxGetCounter] = Console.ReadLine();
 
-                idxGetCounter++;
-            }
-
-
+            //    idxGetCounter++;
+            //}
 
 
+            //int idx = 0;
 
+            //while (idx < numbers.Length)
+            //{
+            //    Console.WriteLine(numbers[idx]);
 
-
-            int idx = 0;
-
-            while (idx < numbers.Length)
-            {
-                Console.WriteLine(numbers[idx]);
-
-                idx++;
-            }
+            //    idx++;
+            //}
 
         }
     }

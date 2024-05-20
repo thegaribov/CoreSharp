@@ -15,12 +15,17 @@ internal class Program
 
             if (command == "/help")
             {
-                Console.WriteLine("1. /show-recent-currency-rates");
-                Console.WriteLine("2. /find-currency-rate-by-code");
-                Console.WriteLine("3. /calculate-amount-by-currecy");
+                Console.WriteLine("1. /show-recent-currency-rates or /all");
+                Console.WriteLine("2. /find-currency-rate-by-code or /find");
+                Console.WriteLine("3. /calculate-amount-by-currecy or /calc");
                 Console.WriteLine("4. /exit");
             }
-            if (command == "/show-recent-currency-rates")
+            else if (command == "/exit")
+            {
+                Console.WriteLine("Program terminates....");
+                break;
+            }
+            else if (command == "/show-recent-currency-rates" || command == "/all")
             {
                 int currIdx = 0;
 
@@ -32,6 +37,31 @@ internal class Program
                     Console.WriteLine($"Aplha3 : {currency}, Rate : {currencyRate}");
 
                     currIdx++;
+                }
+            }
+            else if (command == "/find-currency-rate-by-code" | command == "/find")
+            {
+                Console.Write("Pls enter desired currency code : ");
+                string aplha3 = Console.ReadLine();
+                bool isFound = false;
+
+                for (int i = 0; i < currencies.Length; i++)
+                {
+                    string currency = currencies[i];
+                    decimal currencyRate = currencyRates[i];
+
+                    if (currency == aplha3)
+                    {
+                        Console.Write("We found desired currency, ");
+                        Console.WriteLine($"Aplha3 : {currency}, Rate : {currencyRate}");
+                        isFound = true;
+                        break;
+                    }
+                }
+
+                if (!isFound)
+                {
+                    Console.WriteLine("I'm sorry, we can't found desired currency");
                 }
             }
 

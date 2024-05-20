@@ -9,7 +9,6 @@ internal class Program
 
         while (true)
         {
-            Console.WriteLine("Pls write /help to see available commands");
             Console.Write("Pls enter desired command : ");
             string command = Console.ReadLine();
 
@@ -72,6 +71,12 @@ internal class Program
                 Console.Write("Pls enter desired amount : ");
                 decimal amount = decimal.Parse(Console.ReadLine());
 
+                if (amount <= 0)
+                {
+                    Console.WriteLine("Amount should be greater than 0");
+                    continue;
+                }
+
                 bool isFound = false;
 
                 for (int i = 0; i < currencies.Length; i++)
@@ -92,6 +97,11 @@ internal class Program
                 {
                     Console.WriteLine("I'm sorry, we can't found desired currency");
                 }
+            }
+            else
+            {
+                Console.WriteLine("I'm sorry we didn't find a command");
+                Console.WriteLine("Pls write /help to see available commands");
             }
 
 

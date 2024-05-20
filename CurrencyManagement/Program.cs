@@ -38,7 +38,7 @@ internal class Program
                     currIdx++;
                 }
             }
-            else if (command == "/find-currency-rate-by-code" | command == "/find")
+            else if (command == "/find-currency-rate-by-code" || command == "/find")
             {
                 Console.Write("Pls enter desired currency code : ");
                 string aplha3 = Console.ReadLine();
@@ -63,7 +63,7 @@ internal class Program
                     Console.WriteLine("I'm sorry, we can't found desired currency");
                 }
             }
-            else if (command == "/calculate-amount-by-currency" | command == "/calc")
+            else if (command == "/calculate-amount-by-currency" || command == "/calc")
             {
                 Console.Write("Pls enter desired currency code : ");
                 string aplha3 = Console.ReadLine();
